@@ -24,9 +24,9 @@ const Hero = () => {
       rtZ: { value: 0, min: -10, max: 10 },
     })
 
-  const isSmall = useMediaQuery({ query: '(max-width: 640px)' })
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
-  const isTablet = useMediaQuery({ query: '(max-width: 1024px)' })
+  const isSmallScreen = useMediaQuery({ query: '(max-width: 640px)' })
+  const isMobileScreen = useMediaQuery({ query: '(max-width: 768px)' })
+  const isTabletScreen = useMediaQuery({ query: '(max-width: 1024px)' })
 
 //  const sizes = calculateSizes(isSmall, isMobile, isTablet);
   return (
@@ -52,7 +52,10 @@ const Hero = () => {
                 //scale={0.5}
                 // position={[0, 0 , 0]}
                 // rotation={[0, -Math.PI/2, 50]}
-                scale={ isMobile ? 0.7 : 0.9}
+/*************  ✨ Codeium Command 🌟  *************/
+                scale={isMobileScreen ? 0.7 : isTabletScreen ? 0.8 : 0.9}
+                scale={ isMobileScreen? 0.7 : 0.9}
+/******  d84ec083-2a53-49f7-a533-e4c1314d133f  *******/
                 position={[0, -1, -10.0]}
                 rotation={[0, 4.7,-0.3]}
               />
