@@ -33,21 +33,29 @@ const Hero = () => {
     <section className='min-h-screen  w-full flex flex-col relative'>
       <div className='mx-auto w-full h-full flex flex-col 
       sm:mt-36 mt-20 c-space gap-3'>
-        <p className=' sm:text-3xl text-2xl text-white text-center font-medium font-generalsans'>Hi, I am Ahmed <span className='waving-hand'>👋🏻</span></p>
+        {/* Header Section */}
+        <p className=' sm:text-3xl text-2xl text-white text-center font-medium font-generalsans'>Hi, I am Ahmed <span className='waving-hand'>&#x1F44B;</span></p>
+        {/* Tagline */}
         <p className='hero_tag text-gray_gradient'>Building Products & Brands</p>
       </div>
      
       <div className='w-full h-full absolute inset-0'> 
+          {/* Leva Controls */}
           <Leva/>
+          {/* React Three Fiber Canvas */}
           <Canvas className='w-full h-full '>
              <Suspense fallback={<CanvasLoader/>}>
+              {/* Camera */}
               <PerspectiveCamera makeDefault position={[0, 0, 10]}/>
               
+              {/* Orbit Controls */}
               <OrbitControls ></OrbitControls>
               
+              {/* Lighting */}
               <ambientLight intensity={1} />
               <directionalLight position={[10, 10, 10]} intensity={0.5} />
               
+              {/* Hacker Room Component */}
               <HackerRoom 
                 //scale={0.5}
                 // position={[0, 0 , 0]}
@@ -57,11 +65,13 @@ const Hero = () => {
                 rotation={[0, 4.7,-0.3]}
               />
 
+              {/* Donut Component */}
               <Donut
                 position={[x.psX, x.psY, x.psZ]} 
                 scale={x.sc}
                 rotation={[x.rtX, x.rtY, x.rtZ]}
                 />
+              {/* Text Component */}
               <Text 
                     text="Building Products & Brands" 
                     position={[x.psX, x.psY, x.psZ]} 
@@ -70,10 +80,15 @@ const Hero = () => {
                     color="red" 
               />
 
+              {/* Group Component */}
               <group>
+                {/* Target Component */}
                 <Target position={[-10, -6, -9]} />
+                {/* React Logo Component */}
                 <ReactLogo position={[5, 3, 0]}/>
+                {/* Cube Component */}
                 <Cube position={[4, -2, 0]} scale={0.4}/>
+                {/* Rings Component */}
                 <Rings position={[-25, 15, 0]} />
               </group>
 
@@ -88,3 +103,4 @@ const Hero = () => {
 }
 
 export default Hero
+
