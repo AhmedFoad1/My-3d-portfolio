@@ -3,7 +3,7 @@ import { useFrame } from '@react-three/fiber';
 import { Text3D, Center } from '@react-three/drei';
 
 const Text = ({
-  text = "Hello v0!",
+  text = "Hello it's me Ahmed!",
   position = [0, 0, 0],
   rotation = [0, 0, 0],
   color = "#ffffff",
