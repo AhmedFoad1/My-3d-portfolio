@@ -54,10 +54,9 @@ const Navbar = () => {
 
             </nav>
         </div>
-    </header> 
+    </header> //l-0 r-0 to make it the full width of the screen 
   )
 }
 
 export default Navbar
-
 
